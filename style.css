@@ -1,0 +1,359 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 750px;
+  max-width: 935px;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  font-weight: small;
+}
+
+/* Log In Box */
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  height: 358px;
+  margin-top: 122px;
+}
+
+.login {
+  margin-bottom: 10px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  padding: 10px 0;
+}
+
+.logo {
+  margin: 16px 86.5px 20px;
+}
+
+.loginform {
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.username-fld,
+.password-fld {
+  margin: 6px 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.username-fld input,
+.password-fld input {
+  padding: 8px;
+  height: 20px;
+  width: 260px;
+  border: 0;
+  background-color: #fafafa;
+  padding: 14px 0 2px 8px;
+}
+
+.username-fld input:focus,
+.password-fld input:focus {
+  outline: 1px solid #a8a8a8;
+}
+
+/* label init position*/
+
+.loginform label {
+  padding-left: 10px;
+  padding-top: 6px;
+  color: #999;
+  font-size: 12px;
+  transition: all ease-out 0.1s;
+  pointer-events: none;
+  padding-bottom: 15px;
+  line-height: 6px;
+}
+
+/* hides the placeholder expect in Firefox */
+input::placeholder {
+  visibility: hidden;
+}
+
+/* hides the placeholder in Firefox */
+.loginform ::-moz-placeholder {
+  color: transparent;
+}
+/* label final position */
+label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  padding-bottom: 15px;
+  transform: translateY(10px);
+  line-height: 6px;
+  transition: all ease-out 0.1s;
+  font-size: 14px;
+  color: #999;
+  padding-top: 6px;
+}
+
+input:not(:placeholder-shown) + label {
+  transform: translateY(0);
+  font-size: 10px;
+}
+
+.submit {
+  width: 268px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #b2dffc;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #8e8e8e;
+  margin: 6px 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.separator .line {
+  height: 1px;
+  width: 40%;
+  background-color: #dbdbdb;
+}
+
+.facebook {
+  margin: 8px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.facebook span {
+  margin-left: 8px;
+  color: #385185;
+}
+
+.facebook a {
+  text-decoration: 0;
+}
+
+.password-reset {
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+  color: #00376b;
+  text-decoration: 0;
+  font-size: 12px;
+}
+
+/* Sign up */
+.sign-up {
+  border: 1px solid #dbdbdb;
+  padding: 10px 52px;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 350px;
+}
+
+.sign-up-text {
+  margin: 15px;
+}
+
+.sign-up-text a {
+  text-decoration: none;
+  color: #0095f6;
+  font-weight: 600;
+}
+
+.sign-up,
+.get-the-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Apps */
+.get-the-app {
+  color: #262626;
+}
+
+.appstores a {
+  text-decoration: none;
+}
+
+.divider {
+  width: 2px;
+  height: auto;
+  display: inline-block;
+}
+
+/* Footer which is fixed till 980px, then changes to static, so that it can dissapear */
+footer {
+  position: static;
+  min-height: 50px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+@media only screen and (min-height: 980px) {
+  footer {
+    position: fixed;
+  }
+}
+
+.top-footer,
+.bottom-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  padding: 0 8px 12px;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: #8e8e8e;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.bottom-footer span {
+  margin: 0 8px;
+  color: #8e8e8e;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+/* Style for the Language-selector, so it looks the same but is a functional selector */
+.language {
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  -moz-padding-start: calc(10px - 3px);
+  width: 52px;
+  -moz-padding-start: calc(10px - 3px);
+  color: #8e8e8e;
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.language::-ms-expand {
+  display: none;
+}
+
+select.language {
+  color: #8e8e8e;
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+/* The Image with the Phones will dissapear, when the browser is smaller than 876px */
+@media screen and (min-width: 350px) {
+  .phone-img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 876px) {
+  .phone-img {
+    position: relative;
+    display: flex;
+    width: 389px;
+    height: 618px;
+    top: 0;
+  }
+  .appstores {
+    text-align: center;
+  }
+}
+
+/* Code for the Image Animation */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  11.11% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  44.44% {
+    opacity: 1;
+  }
+  55.55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.screenshot img {
+  position: absolute;
+  top: 99px;
+  right: -2px;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.screenshot #screenshot1 {
+  animation-delay: 0s;
+}
+.screenshot #screenshot2 {
+  animation-delay: 4s;
+}
+.screenshot #screenshot3 {
+  animation-delay: 8s;
+}
+.screenshot #screenshot4 {
+  animation-delay: 12s;
+}
+.screenshot #screenshot5 {
+  animation-delay: 16s;
+}
